@@ -1,0 +1,11 @@
+{
+  "traffic_laya": {
+    "path": "models/traffic-laya",
+    "sha256": "c3e0229144a7efaa40eab8b2d531197fdce916515911eb319b89fba5dd3d9260",
+    "selected_update": 1000,
+    "standing": "Existing trained traffic candidate; new expanded-input task is development only"
+  },
+  "native_runtime": "models/laya-runtime/.venv/bin/python",
+  "planner": "gpt-6-luna via existing isolated Codex bridge",
+  "history": "/Users/ahmedhamedi/Dev/Imperial/Thesis-history/before-community-20261026T140604"
+}
