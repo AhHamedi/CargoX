@@ -429,8 +429,8 @@ def serve(args):
             except (ValueError,TypeError,KeyError,AttributeError) as exc:self.respond(400,{'error':str(exc)})
         def log_message(self,*args):pass
     server=ThreadingHTTPServer(('127.0.0.1',args.port),Handler)
-    print(f'Traffic workspace · http://127.0.0.1:{args.port}/layout?drive=1\nOne-day review; no training.\nRecordings: {session.output}',flush=True)
-    if not args.no_browser:webbrowser.open(f'http://127.0.0.1:{args.port}/layout?drive=1')
+    print(f'CargoX · http://127.0.0.1:{args.port}/layout?demo=1\nInteractive prototype; no model calls or training.\nRecordings: {session.output}',flush=True)
+    if not args.no_browser:webbrowser.open(f'http://127.0.0.1:{args.port}/layout?demo=1')
     try:server.serve_forever()
     except KeyboardInterrupt:pass
     finally:

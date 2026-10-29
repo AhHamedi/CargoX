@@ -1,8 +1,21 @@
-# District · an interactive drive
+# CargoX
+
+An interactive prototype for exploring negotiation and self-organisation among independent vehicle agents.
 
 An eighty-car district for exploring how a decision changes a journey. All cars depart together. This prototype has no LLM calls, learned negotiators, credits or training.
 
-Run `./start`, then open [the demonstration](http://127.0.0.1:8771/layout?demo=1).
+Requires Python 3.12. With [uv](https://docs.astral.sh/uv/), set up a fresh checkout and start it with:
+
+```sh
+git clone https://github.com/AhHamedi/CargoX.git
+cd CargoX
+uv sync --extra test
+./start
+```
+
+Then open [the demonstration](http://127.0.0.1:8771/layout?demo=1). Without uv, create a Python 3.12 environment at `.venv` and install the project with `pip install -e '.[test]'`. The demo has no third-party runtime dependencies and needs no model weights or API keys. `./start --no-browser` starts only the server; `--port 8772` selects another port. An explicit Python executable can be supplied through `CARGOX_PYTHON`.
+
+The initial checkpoint is tagged **`v0.1.0-prototype`**. See [CHECKPOINT.md](CHECKPOINT.md) for its scope and how to return to it.
 
 1. Hover a car to see its number, destination and route. Click it to start following it.
 2. Cards distinguish incoming requests, your outgoing requests and voluntary offers. Each shows one action and side-by-side time effects for you and the involved cars. Available exchanges and incoming requests appear as driving continues. Hover a choice to see translucent future cars, a red interaction marker and their projected paths. The speculative future runs at 8× while the actual drive keeps its selected speed.

@@ -6,7 +6,13 @@ __pycache__/
 *.pyc
 /models/*
 !/models/assets.json
-data/
+/data/*
+!/data/community/
+/data/community/*
+!/data/community/layout-traffic.json.gz
+.env
+.env.*
+!.env.example
 archive/
 viewer/node_modules/
 viewer/dist/
